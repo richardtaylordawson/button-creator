@@ -2,7 +2,7 @@
   "name": "button-creator",
   "version": "1.0.0",
   "author": "richardtaylordawson",
-  "description": "Create a button in real time and generate it's styles to your clipboard.",
+  "description": "Create a button in real time and generate its styles to your clipboard.",
   "homepage": "https://button-creator.richardtaylor.dawson.com",
   "repository": {
     "type": "git",
@@ -12,37 +12,27 @@
     "url": "https://github.com/richardtaylordawson/button-creator/issues"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.21",
-    "@emotion/styled": "^10.0.17",
-    "bootstrap": "^4.3.1",
-    "react": "^16.10.2",
-    "react-bootstrap": "^1.0.0-beta.14",
-    "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8",
+    "react": "^19.2.7",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "^19.2.7"
   },
   "devDependencies": {
-    "prettier": "^2.2.1"
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "prettier": "^3.9.5",
+    "vite": "^8.1.4"
   },
   "scripts": {
-    "develop": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\""
+    "develop": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write \"**/*.{js,jsx,json,md,html}\""
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "packageManager": "yarn@4.15.0+sha512.07ec708ac11e2eaa4ea2b04cfbb272812f7e74a753f1595eaef4486c663a98306a30cca3e6fc40f7a0b168dcfb3a2490b6a5e0501e20fb69cc36f563dd161c53"
 }

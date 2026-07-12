@@ -1,8 +1,7 @@
 import React, { useState } from "react"
 import styled from "@emotion/styled"
 import { Container, Row, Col, Card, Button, Form } from "react-bootstrap"
-import { Input } from "./components/Input"
-import { InstallButton } from "./components/InstallButton"
+import { Input } from "./components/Input.jsx"
 import { copyToClipboard } from "./utils/copy-to-clipboard"
 
 export const App = () => {
@@ -20,10 +19,11 @@ export const App = () => {
   })
 
   const handleInputChange = (event) => {
-    event.persist()
+    const { name, value } = event.target
+
     setButtonValues((buttonValues) => ({
       ...buttonValues,
-      [event.target.name]: event.target.value,
+      [name]: value,
     }))
   }
 
@@ -52,10 +52,7 @@ export const App = () => {
         <Col lg={{ span: 8, offset: 2 }} xs={12}>
           <Card className="mt-3 mb-3">
             <Card.Body>
-              <div className="d-flex justify-content-between">
-                <Card.Title>Button Creator</Card.Title>
-                <InstallButton />
-              </div>
+              <Card.Title>Button Creator</Card.Title>
               <div className="mb-3">
                 <label>Preview:</label>
                 <PreviewButton buttonValues={buttonValues}>
@@ -63,7 +60,7 @@ export const App = () => {
                 </PreviewButton>
               </div>
               <Form>
-                <Form.Row>
+                <Row>
                   <Form.Group as={Col}>
                     <Input
                       label="Background Color"
@@ -82,8 +79,8 @@ export const App = () => {
                       handleInputChange={handleInputChange}
                     />
                   </Form.Group>
-                </Form.Row>
-                <Form.Row>
+                </Row>
+                <Row>
                   <Form.Group as={Col}>
                     <Input
                       label="Text Color"
@@ -102,8 +99,8 @@ export const App = () => {
                       handleInputChange={handleInputChange}
                     />
                   </Form.Group>
-                </Form.Row>
-                <Form.Row>
+                </Row>
+                <Row>
                   <Form.Group as={Col}>
                     <Input
                       label="Border Width"
@@ -122,8 +119,8 @@ export const App = () => {
                       handleInputChange={handleInputChange}
                     />
                   </Form.Group>
-                </Form.Row>
-                <Form.Row>
+                </Row>
+                <Row>
                   <Form.Group as={Col}>
                     <Input
                       label="Padding Top/Bottom"
@@ -142,8 +139,8 @@ export const App = () => {
                       handleInputChange={handleInputChange}
                     />
                   </Form.Group>
-                </Form.Row>
-                <Form.Row>
+                </Row>
+                <Row>
                   <Form.Group as={Col}>
                     <Input
                       label="Font Size"
@@ -162,11 +159,11 @@ export const App = () => {
                       handleInputChange={handleInputChange}
                     />
                   </Form.Group>
-                </Form.Row>
+                </Row>
               </Form>
               <Button
                 variant="success"
-                block
+                className="w-100"
                 onClick={(event) =>
                   copyToClipboard(snippet, event, "Copy snippet")
                 }

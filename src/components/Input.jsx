@@ -12,26 +12,19 @@ export const Input = ({
 
   return (
     <Fragment>
-      <label htmlFor="basic-url">{label}</label>
+      <label htmlFor={name}>{label}</label>
       <InputGroup className="mb-3">
-        {type === "color" && (
-          <InputGroup.Prepend>
-            <InputGroup.Text>#</InputGroup.Text>
-          </InputGroup.Prepend>
-        )}
+        {type === "color" && <InputGroup.Text>#</InputGroup.Text>}
 
         <FormControl
+          id={name}
           name={name}
           value={value}
           onChange={handleInputChange}
           type={type}
         />
 
-        {type === "number" && (
-          <InputGroup.Append>
-            <InputGroup.Text>px</InputGroup.Text>
-          </InputGroup.Append>
-        )}
+        {type === "number" && <InputGroup.Text>px</InputGroup.Text>}
       </InputGroup>
     </Fragment>
   )
