@@ -3,13 +3,10 @@
   "version": "1.0.0",
   "author": "richardtaylordawson",
   "description": "Create a button in real time and generate its styles to your clipboard.",
-  "homepage": "https://button-creator.richardtaylor.dawson.com",
+  "homepage": "https://button-creator.richardtaylordawson.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/richardtaylordawson/button-creator.git"
-  },
-  "bugs": {
-    "url": "https://github.com/richardtaylordawson/button-creator/issues"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
