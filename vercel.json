@@ -1,0 +1,43 @@
+{
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "button-creator-richardtaylordawson03.vercel.app"
+        }
+      ],
+      "destination": "https://button-creator.richardtaylordawson.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "button-creator-richardtaylordawson-richardtaylordawson03.vercel.app"
+        }
+      ],
+      "destination": "https://button-creator.richardtaylordawson.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.button-creator.richardtaylordawson.com"
+        }
+      ],
+      "destination": "https://button-creator.richardtaylordawson.com/:path*",
+      "permanent": true
+    }
+  ]
+}
