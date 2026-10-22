@@ -22,7 +22,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
     "prettier": "^3.9.5",
-    "vite": "^8.1.4"
+    "vite": "^8.1.6"
   },
   "scripts": {
     "develop": "vite",
